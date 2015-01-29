@@ -28,7 +28,7 @@ int main(void){
 	server_addr.sin_addr.s_addr = INADDR_ANY;
 	server_addr.sin_port = htons(puerto);
 
-	printf("$puerto: %x \t(despues de htons)\n", puerto);
+	printf("$puerto: %x \t(despues de htons)\n", htons(puerto));
 
 	bind(s, (struct sockaddr *)&server_addr, sizeof(server_addr));
 	clilen = sizeof(msg_to_client_addr);
