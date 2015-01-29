@@ -1,0 +1,1 @@
+la funcion bzero esta deprecada, se debe utilizar la libreria string.h para no generar warning
