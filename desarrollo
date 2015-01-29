@@ -1,0 +1,17 @@
+9.2
+Es un socket del dominio AF_INET. Sirve para comunicaciones en red (distintas máquinas)
+Es del tipo SOCK_DGRAM pues se utilizará el protocolo UDP (orientado a datagramas).
+
+La función bzero (actualmente se utiliza memset) fija todos los bytes los campos de la variable server_addr en 0 (cero) binario. El tamaño en bytes se establece con la función sizeof.
+
+El valor de puerto es el mismo 
+
+9.3
+La variable server_addr se inicializa en el programa servidor con 3 valores:
+1- Familia del socket AF_INET
+2- Dirección IP especial IN_ADDR_ANY para recibir paquetes de cualquier interfaz.
+3- Puerto a utilizar, en este caso, 7200.
+
+La otra variable msg_to_client_addr podría inicializarse en 0 para ser llenada posteriormente con recvfrom. Contendrá la dirección IP del ciente y el puerto utilizado por este para enviar el paquete.
+
+https://www.cs.cmu.edu/~srini/15-441/F01.full/www/assignments/P2/htmlsim_split/node18.html
